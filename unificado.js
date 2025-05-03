@@ -158,17 +158,18 @@ async function editNote(id) {
   }
 }
 
-async function toggleArchive(id, wasArchived) {
-  try {
-    const noteRef = doc(db, "notas", id);
-    await updateDoc(noteRef, {
-      archived: !wasArchived
-    });
-    renderNotes(!wasArchived);
-  } catch (error) {
+function toggleArchive(noteId, archived) {
+  update(ref(database, 'notas/' + noteId), {
+    archivado: !archived
+  }).then(() => {
+    renderNotes(!archived);
+    showSection(!archived ? 'activas' : 'archivadas');
+  }).catch((error) => {
     console.error("Error al archivar/desarchivar:", error);
-  }
+  });
 }
+
+
 
 async function deleteNote(id) {
   if (!confirm("¿Eliminar esta nota?")) return;
