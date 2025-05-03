@@ -158,16 +158,19 @@ async function editNote(id) {
   }
 }
 
-function toggleArchive(noteId, archived) {
-  update(ref(database, 'notas/' + noteId), {
-    archivado: !archived
-  }).then(() => {
-    renderNotes(!archived);
-    showSection(!archived ? 'activas' : 'archivadas');
-  }).catch((error) => {
+async function toggleArchive(noteId, archived) {
+  try {
+    const noteRef = doc(db, "notas", noteId);
+    await updateDoc(noteRef, { archived: !archived });
+    
+    // Actualiza ambas vistas para asegurar refresco correcto
+    renderNotes(false);  // Notas activas
+    renderNotes(true);   // Notas archivadas
+  } catch (error) {
     console.error("Error al archivar/desarchivar:", error);
-  });
+  }
 }
+
 
 
 
