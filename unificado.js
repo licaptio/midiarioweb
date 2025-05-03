@@ -34,14 +34,17 @@ const db = getFirestore(app);
 const auth = getAuth(app);
 
 function showSection(id) {
-  document.querySelectorAll('.section').forEach(section => {
-    section.classList.remove('active');
+  const sections = ['menu', 'activas', 'archivadas'];
+  sections.forEach(sectionId => {
+    const section = document.getElementById(sectionId);
+    section.style.display = (sectionId === id) ? 'flex' : 'none';
   });
-  document.getElementById(id).classList.add('active');
+
   if (id === 'activas') renderNotes(false);
   if (id === 'archivadas') renderNotes(true);
   if (id === 'menu') renderNoteSummaries();
 }
+
 
 async function saveNote() {
   const author = document.getElementById('author').value.trim() || 'Anónimo';
