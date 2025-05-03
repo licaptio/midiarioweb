@@ -23,7 +23,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyC2eHO_hugzqyoYcu3CUiVhc0CS2HjDFWY",
   authDomain: "midiarioweb-c7de6.firebaseapp.com",
   projectId: "midiarioweb-c7de6",
-  storageBucket: "midiarioweb-c7de6.firebasestorage.app",
+  storageBucket: "midiarioweb-c7de6.appspot.com",
   messagingSenderId: "26488528874",
   appId: "1:26488528874:web:8ee15bbdc497b28cf69c93"
 };
