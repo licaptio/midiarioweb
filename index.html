@@ -216,6 +216,7 @@ body {
     <button onclick="login()">Ingresar</button>
     <button onclick="register()">Registrarse</button>
   </div>
+</div>
 
 <!-- APP PROTEGIDA -->
   <div id="app" style="display: none;">
@@ -224,7 +225,9 @@ body {
     <button onclick="showSection('activas')">Ver Notas Activas</button>
     <button onclick="showSection('archivadas')">Ver Archivadas</button>
     <button onclick="logout()">Cerrar sesión</button>
-</div>    
+</div>
+
+
   <div id="menu" class="section active">
     <div class="main-container">
       <div class="note-form-section">
@@ -252,18 +255,6 @@ body {
   </div>
   <script type="module" src="unificado.js"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const loginSection = document.getElementById('login-section');
-    if (loginSection && loginSection.style.display !== 'none') {
-      document.body.style.backgroundImage = "url('PICUTRE.avif')";
-      document.body.style.backgroundSize = "cover";
-      document.body.style.backgroundRepeat = "no-repeat";
-      document.body.style.backgroundPosition = "center center";
-    } else {
-      document.body.style.backgroundImage = "none";
-    }
-  });
-</script>
 
 </body>
 </html>

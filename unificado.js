@@ -220,17 +220,25 @@ async function logout() {
   }
 }
 
-// Escucha si el usuario está logueado
 onAuthStateChanged(auth, user => {
+  const loginWrapper = document.getElementById('login-wrapper');
+  const appSection = document.getElementById('app');
+
   if (user) {
-    document.getElementById('login-section').style.display = 'none';
-    document.getElementById('app').style.display = 'block';
+    loginWrapper.style.display = 'none';
+    appSection.style.display = 'block';
+    document.body.style.backgroundImage = 'none'; // quitar fondo al entrar
     renderNoteSummaries();
   } else {
-    document.getElementById('login-section').style.display = 'block';
-    document.getElementById('app').style.display = 'none';
+    loginWrapper.style.display = 'flex';
+    appSection.style.display = 'none';
+    document.body.style.backgroundImage = "url('PICUTRE.avif')";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundPosition = "center center";
   }
 });
+
 
 window.login = login;
 window.register = register;
