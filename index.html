@@ -15,8 +15,9 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, sans-serif;
-  background-color: #ffffff; /* Fondo blanco para todo el sistema */
+  background-color: #ffffff; /* fondo blanco siempre */
 }
+
 
  
   h1 {
@@ -33,13 +34,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: url('PICUTRE.avif') no-repeat center center;
-  background-size: cover;
 }
-
-
-
- 
 
   #login-section {
     background: white;
@@ -256,5 +251,19 @@ body {
     <div id="archived-notes-container" class="notes-list"></div>
   </div>
   <script type="module" src="unificado.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const loginSection = document.getElementById('login-section');
+    if (loginSection && loginSection.style.display !== 'none') {
+      document.body.style.backgroundImage = "url('PICUTRE.avif')";
+      document.body.style.backgroundSize = "cover";
+      document.body.style.backgroundRepeat = "no-repeat";
+      document.body.style.backgroundPosition = "center center";
+    } else {
+      document.body.style.backgroundImage = "none";
+    }
+  });
+</script>
+
 </body>
 </html>
