@@ -97,22 +97,37 @@ async function renderNoteSummaries() {
 
   try {
     const querySnapshot = await getDocs(collection(db, "notas"));
+    const notes = [];
+
     querySnapshot.forEach(docSnap => {
       const note = docSnap.data();
       if (!note.archived) {
-        const div = document.createElement('div');
-        div.className = 'note-card';
-        div.innerHTML = `<strong>${note.author}</strong><br><small>${note.date} ${note.time}</small>`;
-        div.onclick = () => {
-          showSection('activas');
-        };
-        container.appendChild(div);
+        notes.push(note);
       }
     });
+
+    // Ordenar por fecha y hora descendente (más reciente primero)
+    notes.sort((a, b) => {
+      const dateA = new Date(`${a.date} ${a.time}`);
+      const dateB = new Date(`${b.date} ${b.time}`);
+      return dateB - dateA;
+    });
+
+    notes.forEach(note => {
+      const div = document.createElement('div');
+      div.className = 'note-card';
+      div.innerHTML = `<strong>${note.author}</strong><br><small>${note.date} ${note.time}</small>`;
+      div.onclick = () => {
+        showSection('activas');
+      };
+      container.appendChild(div);
+    });
+
   } catch (error) {
     console.error("Error al cargar notas:", error);
   }
 }
+
 
 async function renderNotes(archived) {
   const container = document.getElementById(archived ? 'archived-notes-container' : 'active-notes-container');
