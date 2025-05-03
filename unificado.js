@@ -20,12 +20,12 @@ import {
 } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: "TU_API_KEY",
-  authDomain: "TU_DOMINIO",
-  projectId: "TU_PROJECT_ID",
-  storageBucket: "TU_BUCKET",
-  messagingSenderId: "TU_SENDER_ID",
-  appId: "TU_APP_ID"
+  apiKey: "AIzaSyC2eHO_hugzqyoYcu3CUiVhc0CS2HjDFWY",
+  authDomain: "midiarioweb-c7de6.firebaseapp.com",
+  projectId: "midiarioweb-c7de6",
+  storageBucket: "midiarioweb-c7de6.firebasestorage.app",
+  messagingSenderId: "26488528874",
+  appId: "1:26488528874:web:8ee15bbdc497b28cf69c93"
 };
 
 const app = initializeApp(firebaseConfig);
