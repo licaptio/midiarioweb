@@ -86,19 +86,25 @@
     display: block;
   }
 
-  .main-container {
-    display: flex;
-    gap: 20px;
-  }
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
-  .note-form-section {
-    width: 30%;
-    margin-left: 30%;
-  }
+.note-form-section {
+  width: 100%;
+  max-width: 400px;
+}
 
-  .notes-summary, .notes-list {
-    width: 30%;
-    margin-left: auto;
+
+.notes-summary, .notes-list {
+  width: 100%;
+  max-width: 400px;
     background: #fff;
     padding: 10px;
     border-radius: 6px;
@@ -153,11 +159,38 @@
     cursor: pointer;
   }
 
-  @media (max-width: 768px) {
-    .main-container {
-      flex-direction: column;
-    }
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
   }
+
+  .note-form-section,
+  .notes-summary,
+  .notes-list {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .note-form textarea {
+    height: 150px;
+  }
+
+  .note-form button {
+    width: 100%;
+  }
+
+  .note-card {
+    font-size: 0.95em;
+  }
+
+  .nav-buttons button {
+    margin: 5px 5px;
+    width: 100%;
+  }
+}
+
 </style>
 
 
