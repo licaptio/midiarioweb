@@ -1,0 +1,914 @@
+{
+  "notes": {
+    "1745881374712": {
+      "archived": true,
+      "author": "SERGIO AGUAYO",
+      "content": "El tema con el checo tueme, amenazo, no llamo su hermano, y que lo demandaron",
+      "createdAt": "2025-04-28T23:02:54.712Z",
+      "date": "28/4/2025",
+      "id": 1745881374712,
+      "time": "17:02",
+      "updatedAt": "2025-04-29T00:15:09.854Z"
+    },
+    "1745883028043": {
+      "archived": true,
+      "author": "TOTAL PLAY ALLENDE",
+      "content": "PAGAR EL TOTAL PLAY DE ALLENDE 0130262932 CTA 730 ANTES DEL ¿24 DE CADA MES O 680 ANTES DEL 20 DE CADA MES REF OXXO Ref: 09000001302629323",
+      "createdAt": "2025-04-28T23:30:28.043Z",
+      "date": "28/4/2025",
+      "id": 1745883028043,
+      "time": "17:30",
+      "updatedAt": "2025-05-01T01:32:51.508Z"
+    },
+    "1745883140871": {
+      "archived": false,
+      "author": "SERGIO AGUAYO CONTRATOS",
+      "content": "Taide Andrea Hernández PAGO DE 1900, MARCAR AL NUMERO 12 CONTRATOS PARA PROTEGER TU EMPRESA Coach Carlos Correa(laboral) TGELEFONO 442 422 2344\n\nesta cosa",
+      "createdAt": "2025-04-28T23:32:20.871Z",
+      "date": "29/4/2025",
+      "id": 1745883140871,
+      "time": "08:05 a.m.",
+      "updatedAt": "2025-04-29T14:05:57.274Z"
+    },
+    "1745883343237": {
+      "archived": true,
+      "author": "BOTANAS SOL",
+      "content": "PASARLE LA PAPELERIA AL WHATS DE 81 1900 2651 CON HIRAM",
+      "createdAt": "2025-04-28T23:35:43.237Z",
+      "date": "28/4/2025",
+      "id": 1745883343237,
+      "time": "17:35",
+      "updatedAt": "2025-04-29T15:13:45.599Z"
+    },
+    "1745883631731": {
+      "archived": true,
+      "author": "SERGIO AGUAYO INVENTARIO ZAPATA",
+      "content": "IMPRIMELE AL INGE EL INVENTARIO DE CHEMA",
+      "createdAt": "2025-04-28T23:40:31.731Z",
+      "date": "28/4/2025",
+      "id": 1745883631731,
+      "time": "17:40",
+      "updatedAt": "2025-04-29T00:15:17.462Z"
+    },
+    "1745883756085": {
+      "archived": true,
+      "author": "PACO DE LAS CPUS",
+      "content": "Ve con paco de las cpus para el cargador",
+      "createdAt": "2025-04-28T23:42:36.085Z",
+      "date": "28/4/2025",
+      "id": 1745883756085,
+      "time": "17:42",
+      "updatedAt": "2025-04-29T15:13:35.103Z"
+    },
+    "1745883905310": {
+      "archived": true,
+      "author": "DIMASA PEDIDO",
+      "content": "50 HARINAS Y DOS DE INTEGRAL MAÑANA 280425 ENREGAN",
+      "createdAt": "2025-04-28T23:45:05.310Z",
+      "date": "28/4/2025",
+      "id": 1745883905310,
+      "time": "17:45",
+      "updatedAt": "2025-04-29T15:13:29.448Z"
+    },
+    "1745884995838": {
+      "archived": true,
+      "author": "AJEMEX MARTHA RAMOS",
+      "content": "ver que paso con la big cola 500 la tarima y los paquetes",
+      "createdAt": "2025-04-29T00:03:15.838Z",
+      "date": "28/4/2025",
+      "id": 1745884995838,
+      "time": "18:03",
+      "updatedAt": "2025-04-29T15:13:23.407Z"
+    },
+    "1745885218965": {
+      "archived": false,
+      "author": "REVISION DE HISTORIAL DE WHATS",
+      "content": "AHORA SI PERRO ANOTA\n\nRevisa lo viejo",
+      "createdAt": "2025-04-29T00:06:58.965Z",
+      "date": "1/5/2025",
+      "id": 1745885218965,
+      "time": "09:47 a.m.",
+      "updatedAt": "2025-05-01T15:47:42.963Z"
+    },
+    "1745885326406": {
+      "archived": true,
+      "author": "CAJAS DE PIZZA PEDIDO",
+      "content": "PEDIOD DE CAJAS DE PIZZA REALIZADO GUADALUPE VALENZUELA",
+      "createdAt": "2025-04-29T00:08:46.406Z",
+      "date": "28/4/2025",
+      "id": 1745885326406,
+      "time": "18:08",
+      "updatedAt": "2025-05-01T01:32:57.013Z"
+    },
+    "1745885556877": {
+      "archived": true,
+      "author": "CIGARRO GIBRAN PEDIDO",
+      "content": "COLOCAR EL PEDIDO DE CIGARR",
+      "createdAt": "2025-04-29T00:12:36.877Z",
+      "date": "28/4/2025",
+      "id": 1745885556877,
+      "time": "18:12",
+      "updatedAt": "2025-04-29T15:12:32.477Z"
+    },
+    "1745885671982": {
+      "archived": false,
+      "author": "SAN JOSE TAURO PEDIDO COLOCADO",
+      "content": "PEDIDO COLOCADO DE SAN JOSE TRAILER",
+      "createdAt": "2025-04-29T00:14:31.982Z",
+      "date": "28/4/2025",
+      "id": 1745885671982,
+      "time": "18:14",
+      "updatedAt": "2025-04-29T00:14:31.982Z"
+    },
+    "1745885684374": {
+      "archived": true,
+      "author": "SAN JOSE AZTLAN",
+      "content": "PEDIDO DE CONVER COLOCADO",
+      "createdAt": "2025-04-29T00:14:44.374Z",
+      "date": "28/4/2025",
+      "id": 1745885684374,
+      "time": "18:14",
+      "updatedAt": "2025-04-29T15:12:29.861Z"
+    },
+    "1745885698822": {
+      "archived": true,
+      "author": "REVISA INVENTARIO ZAPATA",
+      "content": "REVISA LOS INVENTARIOS DE ZAPATA",
+      "createdAt": "2025-04-29T00:14:58.822Z",
+      "date": "28/4/2025",
+      "id": 1745885698822,
+      "time": "18:14",
+      "updatedAt": "2025-04-29T15:12:07.494Z"
+    },
+    "1745885757981": {
+      "archived": false,
+      "author": "PAGO DE GASOLINA OXXO GAS",
+      "content": "PAGAR EL OXXO GAS\n\nmañana perro",
+      "createdAt": "2025-04-29T00:15:57.981Z",
+      "date": "30/4/2025",
+      "id": 1745885757981,
+      "time": "19:33",
+      "updatedAt": "2025-05-01T01:33:06.991Z"
+    },
+    "1745885944830": {
+      "archived": false,
+      "author": "EL PERSONAL DE CAPACITACION PARA GERARDO FACPYA",
+      "content": "EDGARDO Y LA PERSONA DE CURSOS",
+      "createdAt": "2025-04-29T00:19:04.830Z",
+      "date": "28/4/2025",
+      "id": 1745885944830,
+      "time": "18:19",
+      "updatedAt": "2025-04-29T00:19:04.830Z"
+    },
+    "1745886109118": {
+      "archived": false,
+      "author": "RAMIRO Y LA PERSONA DE GALEANA",
+      "content": "SE COBRO EL DIA 25 DE ABRIL 2140.08 Y 2141 POR ERRO REVISAR SI ESTAN EN LOS COBROS DE TERMINALES ACCESAR A LA CUENTA PREGUNTARLE A VANESSA Y PRICILA \n\n\"Vanesa puede revisar en los reportes de terminales del dia 25 un cobro por 2141 e imediatamente 2140.08, saca la papeleria como queiera y lo vemos\"",
+      "createdAt": "2025-04-29T00:21:49.118Z",
+      "date": "28/4/2025",
+      "id": 1745886109118,
+      "time": "18:21",
+      "updatedAt": "2025-04-29T00:21:49.118Z"
+    },
+    "1745886157767": {
+      "archived": true,
+      "author": "SABORES COLORES Y PERFUMES",
+      "content": "PAGA LA FACTURA 28042 NO TIENE FALTANTES SANDA LA ESTA COBRANDO ES DEL 27-3",
+      "createdAt": "2025-04-29T00:22:37.767Z",
+      "date": "28/4/2025",
+      "id": 1745886157767,
+      "time": "18:22",
+      "updatedAt": "2025-04-29T15:11:01.166Z"
+    },
+    "1745886255389": {
+      "archived": true,
+      "author": "SUCURSAL PROVILEON  VANESSA",
+      "content": "Reenvío de factura 8439 A 1836@porunpaismejor.com.mx similares provioleon",
+      "createdAt": "2025-04-29T00:24:15.389Z",
+      "date": "28/4/2025",
+      "id": 1745886255389,
+      "time": "18:24",
+      "updatedAt": "2025-04-29T15:10:45.380Z"
+    },
+    "1745886351549": {
+      "archived": false,
+      "author": "ENCO PEDIDO COLOCADO",
+      "content": "PEDIDO COLOCADO EL VIERNES 25 DE ABRIL REVISAR MARTES 29",
+      "createdAt": "2025-04-29T00:25:51.549Z",
+      "date": "28/4/2025",
+      "id": 1745886351549,
+      "time": "18:25",
+      "updatedAt": "2025-04-29T00:25:51.549Z"
+    },
+    "1745886377358": {
+      "archived": false,
+      "author": "RICOS QUESOS SAMS JUAN SANCHEZ",
+      "content": "los cambios del sams jenny y juan sanchez",
+      "createdAt": "2025-04-29T00:26:17.358Z",
+      "date": "28/4/2025",
+      "id": 1745886377358,
+      "time": "18:26",
+      "updatedAt": "2025-04-29T00:26:17.358Z"
+    },
+    "1745886404278": {
+      "archived": true,
+      "author": "PAGO ROBERTO CANTU OZUNA",
+      "content": "PAGO DE LA FACUTRA 30026 POR 17496 PAGALE A PANCHO DE LA UNION",
+      "createdAt": "2025-04-29T00:26:44.278Z",
+      "date": "28/4/2025",
+      "id": 1745886404278,
+      "time": "18:26",
+      "updatedAt": "2025-04-29T00:45:42.677Z"
+    },
+    "1745886438973": {
+      "archived": true,
+      "author": "JOEL AGUAYO GLORIA CASTILLO",
+      "content": "factura 5732 11 DE ABRIL PAGAR",
+      "createdAt": "2025-04-29T00:27:18.973Z",
+      "date": "28/4/2025",
+      "id": 1745886438973,
+      "time": "18:27",
+      "updatedAt": "2025-04-29T15:10:22.017Z"
+    },
+    "1745886601534": {
+      "archived": false,
+      "author": "PEDIDO RASTRILLO AZUL CON LOS ABARROTEROS",
+      "content": "GILLET AZUL PRESTOBARBA COTIZAR CON ABARROTEROS",
+      "createdAt": "2025-04-29T00:30:01.534Z",
+      "date": "28/4/2025",
+      "id": 1745886601534,
+      "time": "18:30",
+      "updatedAt": "2025-04-29T00:30:01.534Z"
+    },
+    "1745886959613": {
+      "archived": true,
+      "author": "ABARROTES PAGO",
+      "content": "PAGALE A ABARROTES MANDALO POS FECHA",
+      "createdAt": "2025-04-29T00:35:59.613Z",
+      "date": "28/4/2025",
+      "id": 1745886959613,
+      "time": "18:35",
+      "updatedAt": "2025-04-29T15:09:48.626Z"
+    },
+    "1745887041525": {
+      "archived": false,
+      "author": "FINANCIAMIENTO BANCARIO",
+      "content": "HEY BANCO JALANDO \nSANTANDER JALANDO \nBANORTE JALANDO\n\nTIENES CITA CON RAYMUNDO HOY A LAS 9PM",
+      "createdAt": "2025-04-29T00:37:21.525Z",
+      "date": "29/4/2025",
+      "id": 1745887041525,
+      "time": "07:27 a.m.",
+      "updatedAt": "2025-04-29T13:27:02.283Z"
+    },
+    "1745887097453": {
+      "archived": true,
+      "author": "PEDIDO SERGIO AGUAYO",
+      "content": "PEDIDO DE CONVERMEX TINAJA Y REYMA",
+      "createdAt": "2025-04-29T00:38:17.453Z",
+      "date": "28/4/2025",
+      "id": 1745887097453,
+      "time": "18:38",
+      "updatedAt": "2025-04-29T15:09:46.337Z"
+    },
+    "1745887107333": {
+      "archived": true,
+      "author": "PEDIDO SERGIO AGUAYO",
+      "content": "PEDIDO DE CONVERMEX TINAJA Y REYMA\n\nPEDIDO NO COLOCADOS ALERTA",
+      "createdAt": "2025-04-29T00:38:27.333Z",
+      "date": "28/4/2025",
+      "id": 1745887107333,
+      "time": "18:38",
+      "updatedAt": "2025-04-29T15:09:43.729Z"
+    },
+    "1745887121390": {
+      "archived": false,
+      "author": "PEDIDO SERGIO AGUAYO",
+      "content": "PEDIDO DE CONVERMEX TINAJA Y REYMA\n\nPEDIDO NO COLOCADOS ALERTA\n\nPIDELE PRECIO A LUPE DE TINAJITA SWIITE",
+      "createdAt": "2025-04-29T00:38:41.390Z",
+      "date": "28/4/2025",
+      "id": 1745887121390,
+      "time": "18:38",
+      "updatedAt": "2025-04-29T00:38:41.390Z"
+    },
+    "1745887252365": {
+      "archived": true,
+      "author": "CABLE DE TELEFONO CON DON MARIO",
+      "content": "ESTA EN LA KICKS",
+      "createdAt": "2025-04-29T00:40:52.365Z",
+      "date": "28/4/2025",
+      "id": 1745887252365,
+      "time": "18:40",
+      "updatedAt": "2025-04-29T15:09:39.520Z"
+    },
+    "1745887605053": {
+      "archived": false,
+      "author": "CORREOS DE PAGA DE PROVEEDORA",
+      "content": "Configura los correos en provileon que es donde mas piden facturas",
+      "createdAt": "2025-04-29T00:46:45.053Z",
+      "date": "28/4/2025",
+      "id": 1745887605053,
+      "time": "18:46",
+      "updatedAt": "2025-04-29T00:46:45.053Z"
+    },
+    "1745887685014": {
+      "archived": false,
+      "author": "REVISA LAS INSTRUCCIONES DEL INGE Y LOS WHATS IMPORTANTE",
+      "content": "REVISA EN LA NOCHE Y PROGRAMA AQUI",
+      "createdAt": "2025-04-29T00:48:05.014Z",
+      "date": "28/4/2025",
+      "id": 1745887685014,
+      "time": "18:48",
+      "updatedAt": "2025-04-29T00:48:05.014Z"
+    },
+    "1745887738765": {
+      "archived": true,
+      "author": "REVISA LOS PAGOS POS FECHA Y SALDOS EN LA CUENTA",
+      "content": "A VER CUALES SON PARA EL 29/04/25",
+      "createdAt": "2025-04-29T00:48:58.765Z",
+      "date": "28/4/2025",
+      "id": 1745887738765,
+      "time": "18:48",
+      "updatedAt": "2025-04-29T15:08:40.488Z"
+    },
+    "1745888044237": {
+      "archived": true,
+      "author": "PEDIDO RASTRILLO AZUL CON LOS ABARROTEROS",
+      "content": "GILLET AZUL PRESTOBARBA COTIZAR CON ABARROTEROS\n\nMAS BODEGA 12.90 PZA\nDECASA PRECIO A$10.95\nABARROTES PRECIO $14.17\n\nPEDIDO CON DECASA",
+      "createdAt": "2025-04-29T00:54:04.237Z",
+      "date": "28/4/2025",
+      "id": 1745888044237,
+      "time": "18:54",
+      "updatedAt": "2025-04-29T00:54:20.053Z"
+    },
+    "1745888455234": {
+      "archived": false,
+      "author": "ALLENDE ROSALINDA CONTRATO DE ARRENDAMIENTO",
+      "content": "FIRMAR POR EL INGE",
+      "createdAt": "2025-04-29T01:00:55.234Z",
+      "date": "28/4/2025",
+      "id": 1745888455234,
+      "time": "07:00 p.m.",
+      "updatedAt": "2025-04-29T01:00:55.234Z"
+    },
+    "1745888612083": {
+      "archived": true,
+      "author": "KLEENEX COSTOS",
+      "content": "28042025 ABARROTES 470.00 \nDECASA 480 ULTIMO COSTO DEL 19/04/2025\n\nHay 78 tenis todavía al día de hoy",
+      "createdAt": "2025-04-29T01:03:32.083Z",
+      "date": "28/4/2025",
+      "id": 1745888612083,
+      "time": "07:03 p.m.",
+      "updatedAt": "2025-04-29T15:08:33.767Z"
+    },
+    "1745890257306": {
+      "archived": true,
+      "author": "PEDIDO SERGIO AGUAYO",
+      "content": "PEDIDO DE CONVERMEX TINAJA Y REYMA\n\nPEDIDO NO COLOCADOS ALERTA\n\n\n\nPIDELE PRECIO A Supe DE Tinaja SWII\n\nTE\n\nGalo decir dice que del último precio todavía hay que descontarle $5 pero él nos dio una lista de precios que le descontaba un menos 10 y otra vez menos cinco solo hay que confirmar\n\nCOSTOS \n855 \nREYMA 189\nDECASA 178 \nJAGUAR 180.50\nCONVER 160.37\nBIOS 170\n\nEL INGE NO QUIERE LA BIOS POR ESTAR FUERA DE MARGEN",
+      "createdAt": "2025-04-29T01:30:57.306Z",
+      "date": "28/4/2025",
+      "id": 1745890257306,
+      "time": "19:39",
+      "updatedAt": "2025-04-29T15:07:41.271Z"
+    },
+    "1745891293400": {
+      "archived": true,
+      "author": "SALDOS BANCARIOS",
+      "content": "Prepararlos a los bancarios para Sergio guayo",
+      "createdAt": "2025-04-29T01:48:13.382Z",
+      "date": "28/4/2025",
+      "id": 1745891293400,
+      "time": "07:48 p.m.",
+      "updatedAt": "2025-04-29T15:07:32.653Z"
+    },
+    "1745892138833": {
+      "archived": true,
+      "author": "LOS HONORARIOS DE LA CACHOTA",
+      "content": "Pagar los honorarios de la cachota de desfijo",
+      "createdAt": "2025-04-29T02:02:18.814Z",
+      "date": "28/4/2025",
+      "id": 1745892138833,
+      "time": "08:02 p.m.",
+      "updatedAt": "2025-04-29T15:07:30.109Z"
+    },
+    "1745892194077": {
+      "archived": true,
+      "author": "CÓMO VAN LAS ACCIONES",
+      "content": "Revisa tu plusvalía de acciones",
+      "createdAt": "2025-04-29T02:03:14.076Z",
+      "date": "28/4/2025",
+      "id": 1745892194077,
+      "time": "08:03 p.m.",
+      "updatedAt": "2025-04-29T15:06:20.387Z"
+    },
+    "1745893469985": {
+      "archived": false,
+      "author": "GORDO Y CASPER",
+      "content": "Casper guitarra gordo guitarra y gordo su ojito",
+      "createdAt": "2025-04-29T02:24:29.968Z",
+      "date": "28/4/2025",
+      "id": 1745893469985,
+      "time": "08:24 p.m.",
+      "updatedAt": "2025-04-29T02:24:29.968Z"
+    },
+    "1745894455115": {
+      "archived": true,
+      "author": "Mario santos y la declaración anual extrema urgencia",
+      "content": "Qué pedo con la declaración anual",
+      "createdAt": "2025-04-29T02:40:55.094Z",
+      "date": "28/4/2025",
+      "id": 1745894455115,
+      "time": "08:40 p.m.",
+      "updatedAt": "2025-04-29T12:21:38.393Z"
+    },
+    "1745895245251": {
+      "archived": true,
+      "author": "Borrador del SAT mañana temprano",
+      "content": "Saca los borradores nada más para que tengas más o menos el dato",
+      "createdAt": "2025-04-29T02:54:05.228Z",
+      "date": "28/4/2025",
+      "id": 1745895245251,
+      "time": "08:54 p.m.",
+      "updatedAt": "2025-04-29T12:21:33.129Z"
+    },
+    "1745895434068": {
+      "archived": true,
+      "author": "Planeación final",
+      "content": "Prioritarios \n\nCierre anual\nDeclaración anual\nPagos \nY ya no recuerdo",
+      "createdAt": "2025-04-29T02:57:14.067Z",
+      "date": "29/4/2025",
+      "id": 1745895434068,
+      "time": "06:21 a.m.",
+      "updatedAt": "2025-04-29T12:21:14.257Z"
+    },
+    "1745896325366": {
+      "archived": true,
+      "author": "Prioritario los estados financieros de las de Banregio",
+      "content": "Decisiones decisiones hermano o Banregio o las declaraciones de los señores decídete y revisa los demás frentes",
+      "createdAt": "2025-04-29T03:12:05.366Z",
+      "date": "28/4/2025",
+      "id": 1745896325366,
+      "time": "09:12 p.m.",
+      "updatedAt": "2025-04-29T15:06:16.355Z"
+    },
+    "1745896412763": {
+      "archived": true,
+      "author": "Peinados locos y día de playa",
+      "content": "Mis bebez",
+      "createdAt": "2025-04-29T03:13:32.763Z",
+      "date": "28/4/2025",
+      "id": 1745896412763,
+      "time": "09:13 p.m.",
+      "updatedAt": "2025-04-29T12:21:25.657Z"
+    },
+    "1745896837981": {
+      "archived": false,
+      "author": "Revisa las notas viejas",
+      "content": "Y anotlas aquí por el momento \n\nModifica en fin de semana",
+      "createdAt": "2025-04-29T03:20:37.980Z",
+      "date": "28/4/2025",
+      "id": 1745896837981,
+      "time": "09:20 p.m.",
+      "updatedAt": "2025-04-29T12:19:42.770Z"
+    },
+    "1745896892509": {
+      "archived": true,
+      "author": "Las piezas de amazon",
+      "content": "Rwqsa la notas par que informes\n\nHASTA MEDIADIOS DE MAYO, YA ESTA PEDIDOO",
+      "createdAt": "2025-04-29T03:21:32.508Z",
+      "date": "29/4/2025",
+      "id": 1745896892509,
+      "time": "06:19 a.m.",
+      "updatedAt": "2025-04-29T12:20:02.234Z"
+    },
+    "1745896931103": {
+      "archived": false,
+      "author": "Revsions",
+      "content": "Saldos\nPedidos inge\nInventarios\nDec anual\nY lo demás\nFinanciamientos",
+      "createdAt": "2025-04-29T03:22:11.103Z",
+      "date": "29/4/2025",
+      "id": 1745896931103,
+      "time": "06:20 a.m.",
+      "updatedAt": "2025-04-29T12:20:13.217Z"
+    },
+    "1745897141596": {
+      "archived": true,
+      "author": "El cálculo de retención del la venta rancho",
+      "content": "Verla renta rancho",
+      "createdAt": "2025-04-29T03:25:41.595Z",
+      "date": "28/4/2025",
+      "id": 1745897141596,
+      "time": "09:25 p.m.",
+      "updatedAt": "2025-04-29T12:18:44.883Z"
+    },
+    "1745897651668": {
+      "archived": true,
+      "author": "Podra chatgpti con los audios",
+      "content": "Tips revisa notas y prepárate contra inge 20 min\n\nsi lo hace usalo para sams",
+      "createdAt": "2025-04-29T03:34:11.650Z",
+      "date": "29/4/2025",
+      "id": 1745897651668,
+      "time": "06:18 a.m.",
+      "updatedAt": "2025-04-29T12:18:34.515Z"
+    },
+    "1745897895546": {
+      "archived": true,
+      "author": "Yadira Aguayo y revisar los frentes",
+      "content": "Dedica 20 min a pensar al aire para revisar los frentes\n\nAsigna tareas extras de revisión \n\nGibran y los resultados\n\nSon temporadas de presión\n\nCómo me distraigo con pareja",
+      "createdAt": "2025-04-29T03:38:15.545Z",
+      "date": "28/4/2025",
+      "id": 1745897895546,
+      "time": "09:40 p.m.",
+      "updatedAt": "2025-04-29T12:17:30.084Z"
+    },
+    "1745927926618": {
+      "archived": true,
+      "author": "IR A NOTARIA POR LA CONSTANCIA DE RETENCION",
+      "content": "DE VENTA DE ARRENDAMIENTO\n\nSACA LA VENTA",
+      "createdAt": "2025-04-29T11:58:46.609Z",
+      "date": "29/4/2025",
+      "id": 1745927926618,
+      "time": "06:18 a.m.",
+      "updatedAt": "2025-04-29T15:06:03.131Z"
+    },
+    "1745928227589": {
+      "archived": false,
+      "author": "FRENTES ATACADOS INGE",
+      "content": "* SACAR AL BORRACHO\n* PEDIDO DE SAN JOSE \n* DECLARACION ANUAL SERIGIO AGUAYO\n* DECLARACION ANUAL MARIA DE JESUS \n* CIERRE ANUAL\nFacturación de San José del tráiler\n* ENVIO DE ESTADOS DE CUENTA A SANTANDE R\n* ENVIO DE ACTAS CONSTITUTIVAS A BANORTE\n* SALDOS BANCARIOS \n* INVENTARIO Y PEDIDO DE ZAPATA\n* VACACIONES TODA LA SEMANA PASADA\n* PEDIDOS E INVENTARIOS REVISADOS\n* LOS PELOS LOCOS DE MI HIJO CASPER\n* LOS FINANCIAMIENTOS\n\n\nSaldos\nPedidos inge\nInventarios\nDec anual\nY lo demás\nFinanciamientos\n\n\n\nPrioritarios \n\nCierre anual\nDeclaración anual\nPagos \nY ya no recuerdo\n\nLA TIIE SUBIO",
+      "createdAt": "2025-04-29T12:03:47.588Z",
+      "date": "29/4/2025",
+      "id": 1745928227589,
+      "time": "07:53 a.m.",
+      "updatedAt": "2025-04-29T13:53:11.437Z"
+    },
+    "1745929326720": {
+      "archived": false,
+      "author": "JENNY REVISA",
+      "content": "REVISA LOS WHATS DE JENNY",
+      "createdAt": "2025-04-29T12:22:06.720Z",
+      "date": "29/4/2025",
+      "id": 1745929326720,
+      "time": "06:22 a.m.",
+      "updatedAt": "2025-04-29T12:22:06.720Z"
+    },
+    "1745929457279": {
+      "archived": false,
+      "author": "CON QUE ESTOY EL 290425",
+      "content": "30042025 \nESTOS PASANDO LOS SALDOS A CON EL INGE - - - PAGADO \nDESPUES CON LOS FINANCIEROS - - - FIRMAR Y QUE TE LOS PASEN\nPAGA YA ESTA TODO\n\n\nESTO YA ES PASADO \n\n0624 AM ESTOY CON SALDOS BANCARIOS\n731am acabamos\n20min de descanzo \n8:30 te recomiendo pedidos, vanesa y reorganizar ideas \n9:55 ray no esta ir al mediodia \n9:55 inge jalando con las retenciones\n10:00 METE LOS PEDIDOS Y DEJA LA CAMIONETA\n12:01 REVISA LOS PAGOS ARCADIO PURATOS JOEL PAGO DE CONTRATOS\n12:38 REVISA ZAPATA\n12:46 a 1:30 PAGOS \n1:30 A FINAL FINANCIAMIENTOS\n\n\n\n\nDESPUES DE ESTO TOMA 10 MIN\n\nY REVISA NOTAS \n\nY BAÑATE\n\nCREO DEBERIAS DE DARLE UNA VUELTA A LOS FINANCIEROS 30 MIN\nLAS PLANTAS \nBAÑARSE\nIR A NOTARIA\nREVISAR NOTAS VIEJAS\n\nEL SEXO AHORITA NO IMPORTA, QUEDO DEMOSTRADO AYER\n\nEL CORAN",
+      "createdAt": "2025-04-29T12:24:17.279Z",
+      "date": "30/4/2025",
+      "id": 1745929457279,
+      "time": "12:10",
+      "updatedAt": "2025-04-30T18:10:13.852Z"
+    },
+    "1745930747464": {
+      "archived": false,
+      "author": "VENDE EL ORO EN BURSANET",
+      "content": "ESTA DESPLOMANDOSE INVERTE EN OTRA COSA",
+      "createdAt": "2025-04-29T12:45:47.464Z",
+      "date": "29/4/2025",
+      "id": 1745930747464,
+      "time": "06:45 a.m.",
+      "updatedAt": "2025-04-29T12:45:47.464Z"
+    },
+    "1745931089061": {
+      "archived": false,
+      "author": "PEDIDO DEL CIGARRO GIBRAN",
+      "content": "COLOCA LOS PEDIDOS DE MERCANCIA",
+      "createdAt": "2025-04-29T12:51:29.060Z",
+      "date": "29/4/2025",
+      "id": 1745931089061,
+      "time": "06:51 a.m.",
+      "updatedAt": "2025-04-29T12:51:29.060Z"
+    },
+    "1745931169164": {
+      "archived": true,
+      "author": "PRISCILA MARIO",
+      "content": "CANCELAR VERNELL DE BANCO BASE\n\n\"Hola pris, en proximos meses cancelaremos la cuenta de banco base, vernell deposita alli puedes decirles que la vamos a cerrar, me dices",
+      "createdAt": "2025-04-29T12:52:49.163Z",
+      "date": "29/4/2025",
+      "id": 1745931169164,
+      "time": "09:05",
+      "updatedAt": "2025-04-29T15:14:33.458Z"
+    },
+    "1745931222491": {
+      "archived": false,
+      "author": "BBVA CANCELAR EL SEGURO DEL AUTO",
+      "content": "COMO NO SON COMO LOS OTROS QUE LES DICES Y SOLO CANCELAN",
+      "createdAt": "2025-04-29T12:53:42.491Z",
+      "date": "29/4/2025",
+      "id": 1745931222491,
+      "time": "06:53 a.m.",
+      "updatedAt": "2025-04-29T12:53:42.491Z"
+    },
+    "1745931687773": {
+      "archived": false,
+      "author": "RECUERDA MIENTRAS EXISTA USA LA IA",
+      "content": "TU NO VAS A SALVAR AL MUNDO\n\nCREA UN FUTURO Y LEGADO CON TUS HIJOS",
+      "createdAt": "2025-04-29T13:01:27.773Z",
+      "date": "29/4/2025",
+      "id": 1745931687773,
+      "time": "07:01 a.m.",
+      "updatedAt": "2025-04-29T13:01:27.773Z"
+    },
+    "1745931806683": {
+      "archived": false,
+      "author": "BRYAN Y SALVADOR RIOS",
+      "content": "SERGIO AGUAYO \nPROVEEDORA \nMARIA DE JESUS \nCACHOTA\nBRYAN\nSALVADOR",
+      "createdAt": "2025-04-29T13:03:26.683Z",
+      "date": "29/4/2025",
+      "id": 1745931806683,
+      "time": "07:03 a.m.",
+      "updatedAt": "2025-04-29T13:03:26.683Z"
+    },
+    "1745931889651": {
+      "archived": false,
+      "author": "INVENTARIOS Y PRONTOS PAGOS",
+      "content": "INVENTARIOS \nTORITO CHISO\nCREMA CAMELIA \nFROMELI\n\n\nREVISAR PRONTOS PAGOS \nDULCES DEL NORTE \nDELICIAS\n\nPAGOS RECORDADOS \nARCADIO YA ANDA LLORANDO PAGALE\nBOLPAK Y UNOS QUE ME DIJO EL INGE",
+      "createdAt": "2025-04-29T13:04:49.651Z",
+      "date": "29/4/2025",
+      "id": 1745931889651,
+      "time": "07:20 a.m.",
+      "updatedAt": "2025-04-29T13:20:28.248Z"
+    },
+    "1745934089755": {
+      "archived": false,
+      "author": "Ir a notaría pero.a cual",
+      "content": "Cuál cual\n\nPepe es el de saldaña \n\nAl parecer esa fue la venta\n\nNotarias abren a las 9",
+      "createdAt": "2025-04-29T13:41:29.755Z",
+      "date": "29/4/2025",
+      "id": 1745934089755,
+      "time": "08:02 a.m.",
+      "updatedAt": "2025-04-29T14:02:36.467Z"
+    },
+    "1745934262811": {
+      "archived": false,
+      "author": "PAPELERIA DE CIERRE YARELI",
+      "content": "Revisar precierre\n\nSaldo a favor",
+      "createdAt": "2025-04-29T13:44:22.811Z",
+      "date": "29/4/2025",
+      "id": 1745934262811,
+      "time": "07:44 a.m.",
+      "updatedAt": "2025-04-29T13:44:32.328Z"
+    },
+    "1745934687680": {
+      "archived": false,
+      "author": "ANAM NO PAGO SERGIO AGUAYO",
+      "content": "ANAM no pago",
+      "createdAt": "2025-04-29T13:51:27.680Z",
+      "date": "29/4/2025",
+      "id": 1745934687680,
+      "time": "07:51 a.m.",
+      "updatedAt": "2025-04-29T13:51:27.680Z"
+    },
+    "1745939687986": {
+      "archived": false,
+      "author": "RESUMEN DEL DIA 290425",
+      "content": "PAGOS \nPAGOS DE LA COPARMEX REVISAR FERNANADA - NO HAN CONTESTADO \nJOEL AGUAYO GLORIA CASTILLO - PAGADO \nPAGA LOS CONTRATOS DEL INGE - PAGADO\nTAURO \nMAS UGARTE \nCANELS\nPAGA LA FACTURA 28042 NO TIENE FALTANTES SANDA LA ESTA COBRANDO ES DEL 27-3\nPAGAR EL OXXO GAS\nPAGO DE BIG COLA Y PEDIDO  ver que paso con la big cola 500 la tarima y los paquetes\n\nNOTAS \n\nPASARLE LA PAPELERIA AL WHATS DE 81 1900 2651 CON HIRAM\nPREGUNTAR A LA NOTARIA PEPE EL CONTRATO DE ARRENDAMIENTO Y\nLOS MONTOS DE DEUDA\n\nREVISAR LAS NOTAS VIEJAS\n\nMUISCA DEL INGE REVISAR CON YARELI\nLOS CONTRATOS DEL INGE REVISA YARELI\nEL PEDIDO DE TAURO GIBRAN\n\nANAM YA NO VAMOS A PAGARLOS SERGIO AGUAYO\n\nHEY BANCO JALANDO SANTANDER JALANDO BANORTE JALANDO \nTIENES CITA CON RAYMUNDO HOY A LAS 9PM\t\n\nINVENTARIOS TORITO CHISO CREMA CAMELIA \nFROMELI REVISAR PRONTOS PAGOS DULCES DEL NORTE \nDELICIAS PAGOS RECORDADOS ARCADIO YA ANDA \nLLORANDO PAGALE BOLPAK Y UNOS QUE ME DIJO EL INGE\n\nPrioritario los estados financieros de las de Banregio\nDecisiones decisiones hermano o Banregio o las declaraciones de los señores decídete y revisa los demás frentes\n\nvende el oro en bursanet antes de las 12\n\nlos honorarios de desfico y cachota pagar\n\nPEDIDOS COLOCADOS HOY 290425\nCONVERMEX LINARES\n\nRAMIRO Y LA PERSONA DE GALEANA\nSE COBRO EL DIA 25 DE ABRIL 2140.08 Y 2141 POR ERRO \nREVISAR SI ESTAN EN LOS COBROS DE TERMINALES ACCESAR \nA LA CUENTA PREGUNTARLE A VANESSA Y PRICILA \n\"Vanesa puede revisar en los reportes de \nterminales del dia 25 un cobro por 2141 e \nimediatamente 2140.08, saca la papeleria como queiera y \nlo vemos\"\n\n\nINVENTARIOS \nCOLOCAR PEDIDO ZAPATA \nCIGARRO GIBRAN\n\n\n\nPEDIDO \nCAJAS DE PIZZA\nLOS PEDIDOS DE B41",
+      "createdAt": "2025-04-29T15:14:47.986Z",
+      "date": "29/4/2025",
+      "id": 1745939687986,
+      "time": "02:52 p.m.",
+      "updatedAt": "2025-04-29T20:52:38.672Z"
+    },
+    "1745943769201": {
+      "archived": false,
+      "author": "IMPUESTOS SALVADOR RIOS",
+      "content": "DECLARACION MARIO SANTOS",
+      "createdAt": "2025-04-29T16:22:49.201Z",
+      "date": "29/4/2025",
+      "id": 1745943769201,
+      "time": "10:22",
+      "updatedAt": "2025-04-29T16:22:49.201Z"
+    },
+    "1745943996442": {
+      "archived": false,
+      "author": "PEDIDO DE REYMA LINARES Y MONTERREY",
+      "content": "QUE CONFIRME LA LAURA TODOS QUIEREN EL VIERNENES JOJOJO",
+      "createdAt": "2025-04-29T16:26:36.442Z",
+      "date": "29/4/2025",
+      "id": 1745943996442,
+      "time": "11:33",
+      "updatedAt": "2025-04-29T17:33:26.179Z"
+    },
+    "1745950043741": {
+      "archived": false,
+      "author": "Revisa Zapata",
+      "content": "Revisa zapat",
+      "createdAt": "2025-04-29T18:07:23.739Z",
+      "date": "29/4/2025",
+      "id": 1745950043741,
+      "time": "12:07 p.m.",
+      "updatedAt": "2025-04-29T18:07:23.739Z"
+    },
+    "1745950818545": {
+      "archived": false,
+      "author": "SALDO A FAVOR DECASA",
+      "content": "FACTURA 1827958 9258 PAGADA EL DIA 10 DE ABRIL",
+      "createdAt": "2025-04-29T18:20:18.545Z",
+      "date": "29/4/2025",
+      "id": 1745950818545,
+      "time": "12:20",
+      "updatedAt": "2025-04-29T18:20:18.545Z"
+    },
+    "1745955687744": {
+      "archived": false,
+      "author": "El inge se va a su retiro",
+      "content": "Espiritual sácate las fechas en las cuales no están disponibles",
+      "createdAt": "2025-04-29T19:41:27.714Z",
+      "date": "29/4/2025",
+      "id": 1745955687744,
+      "time": "01:41 p.m.",
+      "updatedAt": "2025-04-29T19:41:27.714Z"
+    },
+    "1745959969328": {
+      "archived": false,
+      "author": "LA NOMINA DE SERGIO AGUAYO",
+      "content": "LA PRENOMINA",
+      "createdAt": "2025-04-29T20:52:49.327Z",
+      "date": "29/4/2025",
+      "id": 1745959969328,
+      "time": "02:52 p.m.",
+      "updatedAt": "2025-04-29T20:52:49.327Z"
+    },
+    "1745965300631": {
+      "archived": false,
+      "author": "GARAÑON TABME QUE PASO",
+      "content": "QUE PASO CON TABME",
+      "createdAt": "2025-04-29T22:21:40.618Z",
+      "date": "29/4/2025",
+      "id": 1745965300631,
+      "time": "16:21",
+      "updatedAt": "2025-04-29T22:21:40.618Z"
+    },
+    "1746016938190": {
+      "archived": false,
+      "author": "TARJETAS INGE",
+      "content": "SACA LAS TARJETAS DE AGUAYO\nIMPRIME LOS EEFF \nY PUES PAGAR",
+      "createdAt": "2025-04-30T12:42:18.181Z",
+      "date": "30/4/2025",
+      "id": 1746016938190,
+      "time": "06:42 a.m.",
+      "updatedAt": "2025-04-30T12:42:18.181Z"
+    },
+    "1746017861013": {
+      "archived": false,
+      "author": "LOS CONTRATOS EN PDF PARA EL INGE YARELI",
+      "content": "CREAR",
+      "createdAt": "2025-04-30T12:57:41.013Z",
+      "date": "30/4/2025",
+      "id": 1746017861013,
+      "time": "06:57 a.m.",
+      "updatedAt": "2025-04-30T12:57:41.013Z"
+    },
+    "1746018175843": {
+      "archived": false,
+      "author": "SALDOS INGE",
+      "content": "Y PIDE LAS TARJETAS PAGA LA MENSUALIDAD DE LA CAMIONETA Y EL PAGO DE PROVEEDORES ES DE 1,600,000\n\nBANCOMER 9658\t187,632.63\nLINEA BANCOMER \t3,650,000.00\nBANCO BASE\t79,321.88\nCREDITO BASE\t1,051,252.47\nSANTANDER 30580\t412,235.35\n\t\n\t30-mar-abr-25\n\t\nDISPONIBLE\t5,380,442.33\n\n\nBANCOMER 9658\t192,518.41 \nLINEA BANCOMER \t3,750,000.00\nBANCO BASE\t79,321.88\nCREDITO BASE\t1,051,252.47\nSANTANDER 30580\t340,284.68\n\t\n\t29-mar-abr-25\n\t\nDISPONIBLE\t5,413,377.44",
+      "createdAt": "2025-04-30T13:02:55.843Z",
+      "date": "30/4/2025",
+      "id": 1746018175843,
+      "time": "08:48",
+      "updatedAt": "2025-04-30T14:48:25.850Z"
+    },
+    "1746022044902": {
+      "archived": false,
+      "author": "Desfico y el financiamiento alerta alerta",
+      "content": "Cómo podremos ir metiendo un financiamiento de cuatro millones de pesos prestado por personas físicas como una especie de Capi",
+      "createdAt": "2025-04-30T14:07:24.876Z",
+      "date": "30/4/2025",
+      "id": 1746022044902,
+      "time": "08:07 a.m.",
+      "updatedAt": "2025-04-30T14:07:24.876Z"
+    },
+    "1746033126880": {
+      "archived": true,
+      "author": "TARJETAS INGE AGUAYO URGENCIA",
+      "content": "INBURSA CORTA EL DIA 07 A 06 DE CADA MES Y EL PAGO ES HASTA EL 24 DE CM\n\nBANAMEX COSCO CORTA EL DIA 24 A 16 DE ABRIL SE PAGA 5 DE CADA MES \n\nBBVA CORAT EL DIA 14 DE CADA MES AL 14 DE CADA MES  DIA 5 CADA MES\n\n\nBANAMEX CORTA 13 A 11 Y SE PAGA EL DIA 2 DE CADA MES",
+      "createdAt": "2025-04-30T17:12:06.880Z",
+      "date": "30/4/2025",
+      "id": 1746033126880,
+      "time": "11:16",
+      "updatedAt": "2025-04-30T17:43:00.052Z"
+    },
+    "1746033477964": {
+      "archived": false,
+      "author": "PAGOS PENDIENTES",
+      "content": "BANAMEX 1 SE PAGA EL DIA 2 VIERNES 22,250.74\n\nBBVA 1 SE PAGOA EL DIA 5 POR 9,147.87\n\n\nBANAMEX 2 SE PAGOA EL DIA 6 DE MAYO POR 37,124.75",
+      "createdAt": "2025-04-30T17:17:57.964Z",
+      "date": "30/4/2025",
+      "id": 1746033477964,
+      "time": "11:17",
+      "updatedAt": "2025-04-30T17:17:57.964Z"
+    },
+    "1746033829863": {
+      "archived": true,
+      "author": "DEPOSITO CACHOTA Y 50 MIL DE FACTURA AL CERO",
+      "content": "SACALO\n\n\nTe encargo  para mañana  $185 para gastos",
+      "createdAt": "2025-04-30T17:23:49.863Z",
+      "date": "30/4/2025",
+      "id": 1746033829863,
+      "time": "11:24",
+      "updatedAt": "2025-04-30T17:42:56.036Z"
+    },
+    "1746036224878": {
+      "archived": false,
+      "author": "BIG COLA Y EL CIF 625",
+      "content": "EL CIF 625",
+      "createdAt": "2025-04-30T18:03:44.878Z",
+      "date": "30/4/2025",
+      "id": 1746036224878,
+      "time": "12:03",
+      "updatedAt": "2025-04-30T18:03:44.878Z"
+    },
+    "1746036235277": {
+      "archived": true,
+      "author": "EL GARAÑON HABLA BIEN CON ELLOS",
+      "content": "GARAÑON",
+      "createdAt": "2025-04-30T18:03:55.277Z",
+      "date": "30/4/2025",
+      "id": 1746036235277,
+      "time": "12:03",
+      "updatedAt": "2025-04-30T18:32:22.788Z"
+    },
+    "1746037604531": {
+      "archived": false,
+      "author": "EL AGUA DE CENTRAL CON CHUY",
+      "content": "[3:15 p.m., 23/4/2025] Gerardo Rios: Que contra 10\n[3:16 p.m., 23/4/2025] Gerardo Rios: Me van a regatear\n[3:16 p.m., 23/4/2025] Gerardo Rios: Pero seguro que no puede ser menos\n\n\nME DICE EL IGNE QUE SI, QUE PIDA EL DINERO Y NEGOCIAR 5000 AHORITA Y 5000 DESPUES DEL TRABAJO ECHO \n\nESO RESUELVELE A LA 1",
+      "createdAt": "2025-04-30T18:26:44.531Z",
+      "date": "30/4/2025",
+      "id": 1746037604531,
+      "time": "12:32",
+      "updatedAt": "2025-04-30T18:32:12.860Z"
+    },
+    "1746046472211": {
+      "archived": false,
+      "author": "Moncada moncada",
+      "content": "La factura de Moncada",
+      "createdAt": "2025-04-30T20:54:32.194Z",
+      "date": "30/4/2025",
+      "id": 1746046472211,
+      "time": "02:54 p.m.",
+      "updatedAt": "2025-04-30T20:54:32.194Z"
+    },
+    "1746048630897": {
+      "archived": false,
+      "author": "CONTADOR Y PAPELERIA DE QUEMAZON",
+      "content": "QUEMAR DOCUMENTOS",
+      "createdAt": "2025-04-30T21:30:30.897Z",
+      "date": "30/4/2025",
+      "id": 1746048630897,
+      "time": "15:30",
+      "updatedAt": "2025-04-30T21:30:30.897Z"
+    },
+    "1746055631977": {
+      "archived": false,
+      "author": "REVISA LOS SERVICIOS COMO LA ALARMA",
+      "content": "ALARMA",
+      "createdAt": "2025-04-30T23:27:11.964Z",
+      "date": "30/4/2025",
+      "id": 1746055631977,
+      "time": "17:27",
+      "updatedAt": "2025-04-30T23:27:11.964Z"
+    },
+    "1746063373336": {
+      "archived": false,
+      "author": "JUEVES 01 05 2025 REVISION DE INVENTARIO",
+      "content": "CREMAS ELOY\n\nY LOS DEMAS INVENTARIOS",
+      "createdAt": "2025-05-01T01:36:13.335Z",
+      "date": "30/4/2025",
+      "id": 1746063373336,
+      "time": "19:36",
+      "updatedAt": "2025-05-01T01:36:13.335Z"
+    },
+    "1746071418536": {
+      "archived": false,
+      "author": "Revisa a los otros clientes",
+      "content": "Chav \nBryan",
+      "createdAt": "2025-05-01T03:50:18.514Z",
+      "date": "30/4/2025",
+      "id": 1746071418536,
+      "time": "09:50 p.m.",
+      "updatedAt": "2025-05-01T03:50:18.514Z"
+    },
+    "1746114180664": {
+      "archived": false,
+      "author": "Migra las claves",
+      "content": "Y también sistema de pedidos\n\nRecuerda que para albergar páginas web Jeep hop y para la base de datos firebase",
+      "createdAt": "2025-05-01T15:43:00.646Z",
+      "date": "1/5/2025",
+      "id": 1746114180664,
+      "time": "09:45 a.m.",
+      "updatedAt": "2025-05-01T15:45:51.378Z"
+    },
+    "1746114270577": {
+      "archived": false,
+      "author": "Migra todos los servicios Telmex y velos anotando aquí",
+      "content": "Todas las pendejadas de cobro de Telmex",
+      "createdAt": "2025-05-01T15:44:30.577Z",
+      "date": "1/5/2025",
+      "id": 1746114270577,
+      "time": "09:44 a.m.",
+      "updatedAt": "2025-05-01T15:44:30.577Z"
+    }
+  }
+}

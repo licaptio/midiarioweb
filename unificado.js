@@ -232,3 +232,6 @@ window.register = register;
 window.logout = logout;
 window.saveNote = saveNote;
 window.showSection = showSection;
+window.editNote = editNote;
+window.toggleArchive = toggleArchive;
+window.deleteNote = deleteNote;
