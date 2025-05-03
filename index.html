@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Firebase App (modular SDK) -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+  import { getFirestore, collection, addDoc, getDocs, updateDoc, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+  const firebaseConfig = {
+    apiKey: "AIzaSyC2eH0_hugzqyoYcu3CUiVhc0CS2HjDFWY",
+    authDomain: "midiarioweb-c7de6.firebaseapp.com",
+    projectId: "midiarioweb-c7de6",
+    storageBucket: "midiarioweb-c7de6.appspot.com",
+    messagingSenderId: "26488528874",
+    appId: "1:26488528874:web:8ee15bbdc497b28cf6c9c3"
+  };
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+</script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notas App</title>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, sans-serif; margin: 0; padding: 0; background: #f5f5f5; }
+    h1 { text-align: center; margin: 20px 0; color: #333; }
+    .nav-buttons { text-align: center; margin-bottom: 20px; }
+    .nav-buttons button {
+      margin: 0 10px; padding: 10px 20px; background: #4CAF50; color: white;
+      border: none; border-radius: 6px; font-weight: bold; cursor: pointer;
+    }
+    .section { display: none; padding: 0 5%; }
+    .section.active { display: block; }
+
+    .main-container { display: flex; gap: 20px; }
+    .note-form-section { width: 30%; margin-left: 30%; }
+    .notes-summary, .notes-list { width: 30%; margin-left: auto; background: #fff; padding: 10px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+    .note-form { display: flex; flex-direction: column; gap: 10px; }
+    .note-form input, .note-form textarea {
+      padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 1em; width: 100%;
+    }
+    .note-form textarea { height: 200px; }
+    .note-form button {
+      padding: 12px; background: #4CAF50; color: white; border: none; border-radius: 6px; font-weight: bold; cursor: pointer;
+    }
+    .note-card {
+      background: white; padding: 15px; margin-bottom: 15px; border: 1px solid #ccc;
+      border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .note-card button {
+      margin-top: 10px; margin-right: 5px; padding: 8px 12px;
+      background: #4CAF50; color: white; border: none; border-radius: 6px; cursor: pointer;
+    }
+    @media (max-width: 768px) {
+      .main-container { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Notas App</h1>
+<div id="login-section">
+  <h2>Iniciar sesión</h2>
+  <input type="email" id="email" placeholder="Correo electrónico"><br><br>
+  <input type="password" id="password" placeholder="Contraseña"><br><br>
+  <button onclick="login()">Ingresar</button>
+  <button onclick="register()">Registrarse</button>
+</div>
+<!-- APP PROTEGIDA -->
+  <div id="app" style="display: none;">
+    <div class="nav-buttons">
+    <button onclick="showSection('menu')">Menu Principal</button>
+    <button onclick="showSection('activas')">Ver Notas Activas</button>
+    <button onclick="showSection('archivadas')">Ver Archivadas</button>
+    <button onclick="logout()">Cerrar sesión</button>
+</div>    
+  <div id="menu" class="section active">
+    <div class="main-container">
+      <div class="note-form-section">
+        <div class="note-form">
+          <input type="text" id="author" placeholder="Autor (opcional)" />
+          <textarea id="content" placeholder="Contenido de la nota"></textarea>
+          <button onclick="saveNote()">Guardar Nota</button>
+        </div>
+      </div>
+      <div class="notes-summary">
+        <h3>Resumen de Notas Activas</h3>
+        <div id="notes-summary-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="activas" class="section">
+    <h2>Notas Activas</h2>
+    <div id="active-notes-container" class="notes-list"></div>
+  </div>
+
+  <div id="archivadas" class="section">
+    <h2>Notas Archivadas</h2>
+    <div id="archived-notes-container" class="notes-list"></div>
+  </div>
+  <script type="module" src="unificado.js"></script>
+</body>
+</html>
