@@ -51,24 +51,29 @@ async function saveNote() {
   const content = document.getElementById('content').value.trim();
   if (!content) return alert("Contenido vacío");
 
-  const note = {
-    id: Date.now(),
-    author,
-    content,
-    date: new Date().toLocaleDateString(),
-    time: new Date().toLocaleTimeString(),
-    archived: false
-  };
+const now = new Date();
+const note = {
+  author,
+  content,
+  timestamp: now.toISOString(), // Nuevo campo con formato estándar
+  date: now.toLocaleDateString(),
+  time: now.toLocaleTimeString(),
+  archived: false
+};
+
 
 try {
     if (currentlyEditingId) {
       const noteRef = doc(db, "notas", currentlyEditingId);
-      await updateDoc(noteRef, {
-        author,
-        content,
-        date: new Date().toLocaleDateString(),
-        time: new Date().toLocaleTimeString()
-      });
+const now = new Date();
+await updateDoc(noteRef, {
+  author,
+  content,
+  date: now.toLocaleDateString(),
+  time: now.toLocaleTimeString(),
+  timestamp: now.toISOString()
+});
+
       alert("Nota actualizada en Firebase");
       currentlyEditingId = null;
     } else {
@@ -97,21 +102,27 @@ async function renderNoteSummaries() {
 
   try {
     const querySnapshot = await getDocs(collection(db, "notas"));
+const notes = [];
+
+async function renderNotes(archived) {
+  const container = document.getElementById(archived ? 'archived-notes-container' : 'active-notes-container');
+  container.innerHTML = '';
+
+  try {
+    const querySnapshot = await getDocs(collection(db, "notas"));
     const notes = [];
 
     querySnapshot.forEach(docSnap => {
-      const note = docSnap.data();
-      if (!note.archived) {
+      const note = { ...docSnap.data(), id: docSnap.id };
+      if (note.archived === archived) {
         notes.push(note);
       }
     });
 
-    // Ordenar por fecha y hora descendente (más reciente primero)
-    notes.sort((a, b) => {
-      const dateA = new Date(`${a.date} ${a.time}`);
-      const dateB = new Date(`${b.date} ${b.time}`);
-      return dateB - dateA;
-    });
+  } catch (error) {
+    console.error("Error al renderizar notas:", error);
+  }
+}
 
     notes.forEach(note => {
       const div = document.createElement('div');
