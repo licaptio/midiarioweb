@@ -77,16 +77,16 @@ await updateDoc(noteRef, {
       alert("Nota actualizada en Firebase");
       currentlyEditingId = null;
     } else {
-      const note = {
-        author,
-        content,
-        date: new Date().toLocaleDateString(),
-        time: new Date().toLocaleTimeString(),
-        archived: false
-      };
-      await addDoc(collection(db, "notas"), note);
-      alert("Nota guardada en Firebase");
-    }
+const now = new Date();
+const note = {
+  author,
+  content,
+  date: now.toLocaleDateString(),
+  time: now.toLocaleTimeString(),
+  timestamp: now.toISOString(),
+  archived: false
+};
+
 
     document.getElementById('author').value = '';
     document.getElementById('content').value = '';
@@ -119,10 +119,33 @@ async function renderNotes(archived) {
       }
     });
 
+    // 🔽 Ordenar por fecha más reciente
+    notes.sort((a, b) => {
+      const timeA = new Date(a.timestamp || `${a.date} ${a.time}`);
+      const timeB = new Date(b.timestamp || `${b.date} ${b.time}`);
+      return timeB - timeA;
+    });
+
+    // 🔽 Mostrar tarjetas ordenadas
+    notes.forEach(note => {
+      const card = document.createElement('div');
+      card.className = 'note-card';
+      card.innerHTML = `
+        <h3>${note.author}</h3>
+        <p>${note.content}</p>
+        <small>${note.date} ${note.time}</small><br>
+        <button onclick="editNote('${note.id}')">Editar</button>
+        <button onclick="toggleArchive('${note.id}', ${archived})">${archived ? 'Desarchivar' : 'Archivar'}</button>
+        <button onclick="deleteNote('${note.id}')">Eliminar</button>
+      `;
+      container.appendChild(card);
+    });
+
   } catch (error) {
     console.error("Error al renderizar notas:", error);
   }
 }
+
 
     notes.forEach(note => {
       const div = document.createElement('div');
