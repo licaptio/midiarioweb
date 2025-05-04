@@ -105,14 +105,13 @@ async function renderNoteSummaries() {
       }
     });
 
-    // Ordenar por más reciente
     notes.sort((a, b) => {
       const timeA = new Date(a.timestamp || `${a.date} ${a.time}`);
       const timeB = new Date(b.timestamp || `${b.date} ${b.time}`);
       return timeB - timeA;
     });
 
-    // Mostrar resumen de notas activas
+    // ✅ Mostrar resumen correctamente
     notes.forEach(note => {
       const div = document.createElement('div');
       div.className = 'note-card';
@@ -123,23 +122,6 @@ async function renderNoteSummaries() {
 
   } catch (error) {
     console.error("Error al cargar notas activas:", error);
-  }
-}
-
-
-
-    notes.forEach(note => {
-      const div = document.createElement('div');
-      div.className = 'note-card';
-      div.innerHTML = `<strong>${note.author}</strong><br><small>${note.date} ${note.time}</small>`;
-      div.onclick = () => {
-        showSection('activas');
-      };
-      container.appendChild(div);
-    });
-
-  } catch (error) {
-    console.error("Error al cargar notas:", error);
   }
 }
 
