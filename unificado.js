@@ -96,49 +96,36 @@ async function renderNoteSummaries() {
 
   try {
     const querySnapshot = await getDocs(collection(db, "notas"));
-const notes = [];
-
-async function renderNotes(archived) {
-  const container = document.getElementById(archived ? 'archived-notes-container' : 'active-notes-container');
-  container.innerHTML = '';
-
-  try {
-    const querySnapshot = await getDocs(collection(db, "notas"));
     const notes = [];
 
     querySnapshot.forEach(docSnap => {
       const note = { ...docSnap.data(), id: docSnap.id };
-      if (note.archived === archived) {
+      if (!note.archived) {
         notes.push(note);
       }
     });
 
-    // 🔽 Ordenar por fecha más reciente
+    // Ordenar por más reciente
     notes.sort((a, b) => {
       const timeA = new Date(a.timestamp || `${a.date} ${a.time}`);
       const timeB = new Date(b.timestamp || `${b.date} ${b.time}`);
       return timeB - timeA;
     });
 
-    // 🔽 Mostrar tarjetas ordenadas
+    // Mostrar resumen de notas activas
     notes.forEach(note => {
-      const card = document.createElement('div');
-      card.className = 'note-card';
-      card.innerHTML = `
-        <h3>${note.author}</h3>
-        <p>${note.content}</p>
-        <small>${note.date} ${note.time}</small><br>
-        <button onclick="editNote('${note.id}')">Editar</button>
-        <button onclick="toggleArchive('${note.id}', ${archived})">${archived ? 'Desarchivar' : 'Archivar'}</button>
-        <button onclick="deleteNote('${note.id}')">Eliminar</button>
-      `;
-      container.appendChild(card);
+      const div = document.createElement('div');
+      div.className = 'note-card';
+      div.innerHTML = `<strong>${note.author}</strong><br><small>${note.date} ${note.time}</small>`;
+      div.onclick = () => showSection('activas');
+      container.appendChild(div);
     });
 
   } catch (error) {
-    console.error("Error al renderizar notas:", error);
+    console.error("Error al cargar notas activas:", error);
   }
 }
+
 
 
     notes.forEach(note => {
@@ -275,6 +262,7 @@ onAuthStateChanged(auth, user => {
     appSection.style.display = 'block';
     document.body.style.backgroundImage = 'none'; // quitar fondo al entrar
     renderNoteSummaries();
+showSection('menu');
   } else {
     loginWrapper.style.display = 'flex';
     appSection.style.display = 'none';
