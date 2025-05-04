@@ -51,50 +51,44 @@ async function saveNote() {
   const content = document.getElementById('content').value.trim();
   if (!content) return alert("Contenido vacío");
 
-const now = new Date();
-const note = {
-  author,
-  content,
-  timestamp: now.toISOString(), // Nuevo campo con formato estándar
-  date: now.toLocaleDateString(),
-  time: now.toLocaleTimeString(),
-  archived: false
-};
+  const now = new Date();
 
-
-try {
+  try {
     if (currentlyEditingId) {
       const noteRef = doc(db, "notas", currentlyEditingId);
-const now = new Date();
-await updateDoc(noteRef, {
-  author,
-  content,
-  date: now.toLocaleDateString(),
-  time: now.toLocaleTimeString(),
-  timestamp: now.toISOString()
-});
+      await updateDoc(noteRef, {
+        author,
+        content,
+        date: now.toLocaleDateString(),
+        time: now.toLocaleTimeString(),
+        timestamp: now.toISOString()
+      });
 
       alert("Nota actualizada en Firebase");
       currentlyEditingId = null;
     } else {
-const now = new Date();
-const note = {
-  author,
-  content,
-  date: now.toLocaleDateString(),
-  time: now.toLocaleTimeString(),
-  timestamp: now.toISOString(),
-  archived: false
-};
+      const note = {
+        author,
+        content,
+        date: now.toLocaleDateString(),
+        time: now.toLocaleTimeString(),
+        timestamp: now.toISOString(),
+        archived: false
+      };
 
+      await addDoc(collection(db, "notas"), note);
+      alert("Nota guardada en Firebase");
+    }
 
     document.getElementById('author').value = '';
     document.getElementById('content').value = '';
     renderNoteSummaries();
+
   } catch (error) {
     console.error("Error al guardar nota:", error);
   }
 }
+
 
 async function renderNoteSummaries() {
   const container = document.getElementById('notes-summary-container');
