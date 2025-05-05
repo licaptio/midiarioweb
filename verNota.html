@@ -52,7 +52,12 @@
 
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-    import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+    import {
+      getFirestore, doc, getDoc
+    } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+    import {
+      getAuth, onAuthStateChanged
+    } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
 
     const firebaseConfig = {
       apiKey: "AIzaSyC2eHO_hugzqyoYcu3CUiVhc0CS2HjDFWY",
@@ -65,11 +70,22 @@
 
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
+    const auth = getAuth(app);
 
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
 
-    if (id) {
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        document.body.innerHTML = "<p>Debes iniciar sesión para ver esta nota.</p>";
+        return;
+      }
+
+      if (!id) {
+        document.body.innerHTML = "<p>ID de nota no proporcionado.</p>";
+        return;
+      }
+
       const docRef = doc(db, "notas", id);
       getDoc(docRef).then(docSnap => {
         if (docSnap.exists()) {
@@ -80,10 +96,11 @@
         } else {
           document.body.innerHTML = "<p>No se encontró la nota.</p>";
         }
+      }).catch(error => {
+        document.body.innerHTML = "<p>Error al cargar la nota.</p>";
+        console.error(error);
       });
-    } else {
-      document.body.innerHTML = "<p>ID de nota no proporcionado.</p>";
-    }
+    });
   </script>
 </body>
 </html>
