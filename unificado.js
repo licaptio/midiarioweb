@@ -237,6 +237,39 @@ showSection('menu');
 });
 
 
+
+function editNote(id) {
+  getDoc(doc(db, "notas", id))
+    .then(docSnap => {
+      if (docSnap.exists()) {
+        const note = docSnap.data();
+        document.getElementById('author').value = note.author || '';
+        document.getElementById('content').value = note.content || '';
+        currentlyEditingId = id;
+        showSection('menu');
+      } else {
+        alert("Nota no encontrada.");
+      }
+    })
+    .catch(error => {
+      console.error("Error al editar nota:", error);
+    });
+}
+
+function toggleArchive(id, archived) {
+  const noteRef = doc(db, "notas", id);
+  updateDoc(noteRef, {
+    archived: !archived
+  })
+    .then(() => {
+      renderNotes(true);
+      renderNotes(false);
+    })
+    .catch(error => {
+      console.error("Error al archivar/desarchivar nota:", error);
+    });
+}
+
 window.login = login;
 window.register = register;
 window.logout = logout;
