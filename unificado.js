@@ -191,10 +191,13 @@ async function login() {
 
   try {
     await signInWithEmailAndPassword(auth, email, password);
+    // ✅ MOSTRAR LA APP
+    showSection('menu');
   } catch (error) {
     alert("Error al iniciar sesión: " + error.message);
   }
 }
+
 
 async function register() {
   const email = document.getElementById('email').value;
