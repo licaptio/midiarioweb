@@ -132,60 +132,41 @@ async function renderNotes(archived) {
 
   try {
     const querySnapshot = await getDocs(collection(db, "notas"));
+    const notes = [];
+
     querySnapshot.forEach(docSnap => {
       const note = { ...docSnap.data(), id: docSnap.id };
       if (note.archived === archived) {
-        const card = document.createElement('div');
-        card.className = 'note-card';
-        card.innerHTML = `
-          <h3>${note.author}</h3>
-          <p>${note.content}</p>
-          <small>${note.date} ${note.time}</small><br>
-          <button onclick="editNote('${note.id}')">Editar</button>
-          <button onclick="toggleArchive('${note.id}', ${archived})">${archived ? 'Desarchivar' : 'Archivar'}</button>
-          <button onclick="deleteNote('${note.id}')">Eliminar</button>
-        `;
-        container.appendChild(card);
+        notes.push(note);
       }
+    });
+
+    // 🟢 Ordenar por timestamp descendente
+    notes.sort((a, b) => {
+      const timeA = new Date(a.timestamp || `${a.date} ${a.time}`);
+      const timeB = new Date(b.timestamp || `${b.date} ${b.time}`);
+      return timeB - timeA;
+    });
+
+    // Mostrar las notas ordenadas
+    notes.forEach(note => {
+      const card = document.createElement('div');
+      card.className = 'note-card';
+      card.innerHTML = `
+        <h3>${note.author}</h3>
+        <p>${note.content}</p>
+        <small>${note.date} ${note.time}</small><br>
+        <button onclick="editNote('${note.id}')">Editar</button>
+        <button onclick="toggleArchive('${note.id}', ${archived})">${archived ? 'Desarchivar' : 'Archivar'}</button>
+        <button onclick="deleteNote('${note.id}')">Eliminar</button>
+      `;
+      container.appendChild(card);
     });
   } catch (error) {
     console.error("Error al renderizar notas:", error);
   }
 }
 
-async function editNote(id) {
-  try {
-    const docRef = doc(db, "notas", id);
-    const docSnap = await getDoc(docRef);
-    if (docSnap.exists()) {
-      const note = docSnap.data();
-      if (confirm("¿Deseas editar esta nota?")) {
-        currentlyEditingId = id;
-        document.getElementById('author').value = note.author;
-        document.getElementById('content').value = note.content;
-        showSection('menu');
-        window.scrollTo(0, 0);
-      }
-    } else {
-      alert("Nota no encontrada.");
-    }
-  } catch (error) {
-    console.error("Error al cargar la nota:", error);
-  }
-}
-
-async function toggleArchive(noteId, archived) {
-  try {
-    const noteRef = doc(db, "notas", noteId);
-    await updateDoc(noteRef, { archived: !archived });
-    
-    // Actualiza ambas vistas para asegurar refresco correcto
-    renderNotes(false);  // Notas activas
-    renderNotes(true);   // Notas archivadas
-  } catch (error) {
-    console.error("Error al archivar/desarchivar:", error);
-  }
-}
 
 
 
