@@ -116,7 +116,7 @@ async function renderNoteSummaries() {
       const div = document.createElement('div');
       div.className = 'note-card';
       div.innerHTML = `<strong>${note.author}</strong><br><small>${note.date} ${note.time}</small>`;
-      div.onclick = () => showSection('activas');
+      div.onclick = () => openModal(note);
       container.appendChild(div);
     });
 
@@ -245,3 +245,17 @@ window.showSection = showSection;
 window.editNote = editNote;
 window.toggleArchive = toggleArchive;
 window.deleteNote = deleteNote;
+
+function openModal(note) {
+  document.getElementById('modal-note-author').textContent = note.author;
+  document.getElementById('modal-note-content').textContent = note.content;
+  document.getElementById('modal-note-time').textContent = `${note.date} ${note.time}`;
+  document.getElementById('note-modal').style.display = 'flex';
+}
+
+function closeModal() {
+  document.getElementById('note-modal').style.display = 'none';
+}
+
+window.openModal = openModal;
+window.closeModal = closeModal;
