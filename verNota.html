@@ -23,8 +23,13 @@
       color: #333;
     }
 
-    p {
+    .note-text {
+      white-space: pre-wrap;
       font-size: 18px;
+      line-height: 1.6;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      color: #222;
     }
 
     small {
@@ -45,7 +50,7 @@
 <body>
   <div class="note-container">
     <h2 id="note-author"></h2>
-    <p id="note-content"></p>
+    <div id="note-content" class="note-text"></div>
     <small id="note-date"></small><br>
     <button onclick="window.location.href='index.html'">Regresar</button>
   </div>
