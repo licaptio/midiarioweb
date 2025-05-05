@@ -116,7 +116,7 @@ async function renderNoteSummaries() {
       const div = document.createElement('div');
       div.className = 'note-card';
       div.innerHTML = `<strong>${note.author}</strong><br><small>${note.date} ${note.time}</small>`;
-      div.onclick = () => openModal(note);
+      div.onclick = () => showSection('activas');
       container.appendChild(div);
     });
 
@@ -191,13 +191,10 @@ async function login() {
 
   try {
     await signInWithEmailAndPassword(auth, email, password);
-    // ✅ MOSTRAR LA APP
-    showSection('menu');
   } catch (error) {
     alert("Error al iniciar sesión: " + error.message);
   }
 }
-
 
 async function register() {
   const email = document.getElementById('email').value;
@@ -239,23 +236,6 @@ showSection('menu');
   }
 });
 
-function editNote(id) {
-  getDoc(doc(db, "notas", id))
-    .then(docSnap => {
-      if (docSnap.exists()) {
-        const note = docSnap.data();
-        document.getElementById('author').value = note.author;
-        document.getElementById('content').value = note.content;
-        currentlyEditingId = id;
-        showSection('menu');
-      } else {
-        alert("Nota no encontrada");
-      }
-    })
-    .catch(error => {
-      console.error("Error al cargar la nota para edición:", error);
-    });
-}
 
 window.login = login;
 window.register = register;
@@ -265,29 +245,3 @@ window.showSection = showSection;
 window.editNote = editNote;
 window.toggleArchive = toggleArchive;
 window.deleteNote = deleteNote;
-
-function openModal(note) {
-  document.getElementById('modal-note-author').textContent = note.author;
-  document.getElementById('modal-note-content').textContent = note.content;
-  document.getElementById('modal-note-time').textContent = `${note.date} ${note.time}`;
-  document.getElementById('note-modal').style.display = 'flex';
-}
-
-function closeModal() {
-  document.getElementById('note-modal').style.display = 'none';
-}
-
-window.openModal = openModal;
-window.closeModal = closeModal;
-// Asocia el botón de cerrar modal después de que cargue el documento
-document.addEventListener('DOMContentLoaded', () => {
-  const closeBtn = document.getElementById('close-button');
-  if (closeBtn) {
-    closeBtn.addEventListener('click', closeModal);
-  }
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById('login-btn')?.addEventListener('click', login);
-  document.getElementById('register-btn')?.addEventListener('click', register);
-});
