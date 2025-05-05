@@ -116,7 +116,7 @@ async function renderNoteSummaries() {
       const div = document.createElement('div');
       div.className = 'note-card';
       div.innerHTML = `<strong>${note.author}</strong><br><small>${note.date} ${note.time}</small>`;
-      div.onclick = () => showSection('activas');
+      div.onclick = () => window.location.href = `verNota.html?id=${note.id}`;
       container.appendChild(div);
     });
 
