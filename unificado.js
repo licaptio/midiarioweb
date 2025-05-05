@@ -259,3 +259,10 @@ function closeModal() {
 
 window.openModal = openModal;
 window.closeModal = closeModal;
+// Asocia el botón de cerrar modal después de que cargue el documento
+document.addEventListener('DOMContentLoaded', () => {
+  const closeBtn = document.getElementById('close-button');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+  }
+});
