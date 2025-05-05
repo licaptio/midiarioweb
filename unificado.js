@@ -111,18 +111,44 @@ async function renderNoteSummaries() {
       return timeB - timeA;
     });
 
-    // ✅ Mostrar resumen correctamente
     notes.forEach(note => {
       const div = document.createElement('div');
       div.className = 'note-card';
       div.innerHTML = `<strong>${note.author}</strong><br><small>${note.date} ${note.time}</small>`;
-      div.onclick = () => showSection('activas');
+      div.onclick = () => showNoteModal(note); // Cambio clave aquí
       container.appendChild(div);
     });
 
   } catch (error) {
     console.error("Error al cargar notas activas:", error);
   }
+}
+
+// Versión a CONSERVAR (mejorada)
+function showNoteModal(note) {
+  if (!note) return;  // Validación añadida
+  
+  const modal = document.createElement('div');
+  modal.className = 'note-modal';
+  
+  modal.innerHTML = `
+    <div class="modal-content">
+      <h3>${note.author || 'Anónimo'}</h3>  <!-- Valor por defecto -->
+      <p style="white-space: pre-wrap;">${note.content || ''}</p>  <!-- Valores seguros -->
+      <small>${note.date || ''} ${note.time || ''}</small>
+      <div class="modal-actions">
+        <button class="modal-edit" onclick="editNote('${note.id}'); closeModal()">Editar</button>
+        <button class="modal-archive" onclick="toggleArchive('${note.id}', ${note.archived || false})">
+          ${note.archived ? 'Desarchivar' : 'Archivar'}
+        </button>
+        <button class="modal-close" onclick="closeModal()">Cerrar</button>
+      </div>
+    </div>
+  `;
+  
+  modal.onclick = (e) => e.target === modal && closeModal();
+  document.body.appendChild(modal);
+  document.body.style.overflow = 'hidden';
 }
 
 
@@ -236,7 +262,58 @@ showSection('menu');
   }
 });
 
+// [...] (todo tu código existente hasta onAuthStateChanged)
 
+// 1. FUNCIONES NUEVAS MEJORADAS (añade esto justo antes de las exportaciones window)
+// --------------------------------------------------
+async function editNote(id) {
+  try {
+    const noteRef = doc(db, "notas", id);
+    const noteSnap = await getDoc(noteRef);
+    
+    if (noteSnap.exists()) {
+      const note = noteSnap.data();
+      document.getElementById('author').value = note.author;
+      document.getElementById('content').value = note.content;
+      currentlyEditingId = id;
+      showSection('menu');
+      window.scrollTo(0, 0); // Para asegurar que se vea el formulario
+    }
+  } catch (error) {
+    console.error("Error al editar nota:", error);
+    alert("Error al cargar la nota para editar");
+  }
+}
+
+async function toggleArchive(id, currentlyArchived) {
+  try {
+    const noteRef = doc(db, "notas", id);
+    await updateDoc(noteRef, {
+      archived: !currentlyArchived
+    });
+    renderNotes(false);
+    renderNotes(true);
+    renderNoteSummaries();
+    if (document.querySelector('.note-modal')) {
+      closeModal();
+    }
+  } catch (error) {
+    console.error("Error al archivar/desarchivar nota:", error);
+    alert("Error al cambiar el estado de la nota");
+  }
+}
+
+function closeModal() {
+  const modal = document.querySelector('.note-modal');
+  if (modal) {
+    modal.remove();
+    document.body.style.overflow = 'auto';
+  }
+}
+
+// --------------------------------------------------
+
+// 2. EXPORTACIÓN DE FUNCIONES (solo este bloque, elimina el duplicado)
 window.login = login;
 window.register = register;
 window.logout = logout;
@@ -245,3 +322,5 @@ window.showSection = showSection;
 window.editNote = editNote;
 window.toggleArchive = toggleArchive;
 window.deleteNote = deleteNote;
+window.showNoteModal = showNoteModal;
+window.closeModal = closeModal; 	 
