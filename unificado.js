@@ -269,3 +269,8 @@ document.addEventListener('DOMContentLoaded', () => {
     closeBtn.addEventListener('click', closeModal);
   }
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('login-btn')?.addEventListener('click', login);
+  document.getElementById('register-btn')?.addEventListener('click', register);
+});
