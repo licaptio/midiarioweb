@@ -1,5 +1,3 @@
-
-// 🔁 ARCHIVO: unificado.js
 let currentlyEditingId = null;
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
@@ -7,7 +5,7 @@ import {
   getFirestore,
   collection,
   getDocs,
-  getDoc,
+  getDoc,  // 👈 este te falta
   addDoc,
   doc,
   deleteDoc,
@@ -47,10 +45,11 @@ function showSection(id) {
   if (id === 'menu') renderNoteSummaries();
 }
 
+
 async function saveNote() {
-  const author = document.getElementById('author').value.trim() || 'Anonimo';
+  const author = document.getElementById('author').value.trim() || 'Anónimo';
   const content = document.getElementById('content').value.trim();
-  if (!content) return alert("Contenido vacio");
+  if (!content) return alert("Contenido vacío");
 
   const now = new Date();
 
@@ -64,6 +63,7 @@ async function saveNote() {
         time: now.toLocaleTimeString(),
         timestamp: now.toISOString()
       });
+
       alert("Nota actualizada en Firebase");
       currentlyEditingId = null;
     } else {
@@ -75,6 +75,7 @@ async function saveNote() {
         timestamp: now.toISOString(),
         archived: false
       };
+
       await addDoc(collection(db, "notas"), note);
       alert("Nota guardada en Firebase");
     }
@@ -88,6 +89,7 @@ async function saveNote() {
   }
 }
 
+
 async function renderNoteSummaries() {
   const container = document.getElementById('notes-summary-container');
   container.innerHTML = '';
@@ -95,26 +97,21 @@ async function renderNoteSummaries() {
   try {
     const querySnapshot = await getDocs(collection(db, "notas"));
     const notes = [];
-    const promises = [];
 
     querySnapshot.forEach(docSnap => {
-      const data = docSnap.data();
-      if (!data.archived) {
-        if (!data.timestamp) {
-          const date = data.date || '2000-01-01';
-          const time = data.time || '00:00:00';
-          const fixedTimestamp = new Date(`${date} ${time}`).toISOString();
-          const updatePromise = updateDoc(doc(db, "notas", docSnap.id), { timestamp: fixedTimestamp });
-          data.timestamp = fixedTimestamp;
-          promises.push(updatePromise);
-        }
-        notes.push({ ...data, id: docSnap.id });
+      const note = { ...docSnap.data(), id: docSnap.id };
+      if (!note.archived) {
+        notes.push(note);
       }
     });
 
-    await Promise.all(promises);
+    notes.sort((a, b) => {
+      const timeA = new Date(a.timestamp || `${a.date} ${a.time}`);
+      const timeB = new Date(b.timestamp || `${b.date} ${b.time}`);
+      return timeB - timeA;
+    });
 
-    notes.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+    // ✅ Mostrar resumen correctamente
     notes.forEach(note => {
       const div = document.createElement('div');
       div.className = 'note-card';
@@ -128,6 +125,7 @@ async function renderNoteSummaries() {
   }
 }
 
+
 async function renderNotes(archived) {
   const container = document.getElementById(archived ? 'archived-notes-container' : 'active-notes-container');
   container.innerHTML = '';
@@ -135,26 +133,22 @@ async function renderNotes(archived) {
   try {
     const querySnapshot = await getDocs(collection(db, "notas"));
     const notes = [];
-    const promises = [];
 
     querySnapshot.forEach(docSnap => {
       const note = { ...docSnap.data(), id: docSnap.id };
       if (note.archived === archived) {
-        if (!note.timestamp) {
-          const date = note.date || '2000-01-01';
-          const time = note.time || '00:00:00';
-          const fixedTimestamp = new Date(`${date} ${time}`).toISOString();
-          const updatePromise = updateDoc(doc(db, "notas", docSnap.id), { timestamp: fixedTimestamp });
-          note.timestamp = fixedTimestamp;
-          promises.push(updatePromise);
-        }
         notes.push(note);
       }
     });
 
-    await Promise.all(promises);
+    // 🟢 Ordenar por timestamp descendente
+    notes.sort((a, b) => {
+      const timeA = new Date(a.timestamp || `${a.date} ${a.time}`);
+      const timeB = new Date(b.timestamp || `${b.date} ${b.time}`);
+      return timeB - timeA;
+    });
 
-    notes.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+    // Mostrar las notas ordenadas
     notes.forEach(note => {
       const card = document.createElement('div');
       card.className = 'note-card';
@@ -168,8 +162,119 @@ async function renderNotes(archived) {
       `;
       container.appendChild(card);
     });
-
   } catch (error) {
     console.error("Error al renderizar notas:", error);
   }
 }
+
+
+
+
+
+async function deleteNote(id) {
+  if (!confirm("¿Eliminar esta nota?")) return;
+
+  try {
+    await deleteDoc(doc(db, "notas", id));
+    renderNotes(true);
+    renderNotes(false);
+  } catch (error) {
+    console.error("Error al eliminar nota:", error);
+  }
+}
+
+renderNoteSummaries();
+
+async function login() {
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  try {
+    await signInWithEmailAndPassword(auth, email, password);
+  } catch (error) {
+    alert("Error al iniciar sesión: " + error.message);
+  }
+}
+
+async function register() {
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
+
+  try {
+    await createUserWithEmailAndPassword(auth, email, password);
+    alert("Usuario registrado correctamente");
+  } catch (error) {
+    alert("Error al registrar: " + error.message);
+  }
+}
+
+async function logout() {
+  try {
+    await signOut(auth);
+  } catch (error) {
+    alert("Error al cerrar sesión: " + error.message);
+  }
+}
+
+onAuthStateChanged(auth, user => {
+  const loginWrapper = document.getElementById('login-wrapper');
+  const appSection = document.getElementById('app');
+
+  if (user) {
+    loginWrapper.style.display = 'none';
+    appSection.style.display = 'block';
+    document.body.style.backgroundImage = 'none'; // quitar fondo al entrar
+    renderNoteSummaries();
+showSection('menu');
+  } else {
+    loginWrapper.style.display = 'flex';
+    appSection.style.display = 'none';
+    document.body.style.backgroundImage = "url('PICUTRE.avif')";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundRepeat = "no-repeat";
+    document.body.style.backgroundPosition = "center center";
+  }
+});
+
+
+
+function editNote(id) {
+  getDoc(doc(db, "notas", id))
+    .then(docSnap => {
+      if (docSnap.exists()) {
+        const note = docSnap.data();
+        document.getElementById('author').value = note.author || '';
+        document.getElementById('content').value = note.content || '';
+        currentlyEditingId = id;
+        showSection('menu');
+      } else {
+        alert("Nota no encontrada.");
+      }
+    })
+    .catch(error => {
+      console.error("Error al editar nota:", error);
+    });
+}
+
+function toggleArchive(id, archived) {
+  const noteRef = doc(db, "notas", id);
+  updateDoc(noteRef, {
+    archived: !archived
+  })
+    .then(() => {
+      renderNotes(true);
+      renderNotes(false);
+    })
+    .catch(error => {
+      console.error("Error al archivar/desarchivar nota:", error);
+    });
+}
+
+window.login = login;
+window.register = register;
+window.logout = logout;
+window.saveNote = saveNote;
+window.showSection = showSection;
+window.editNote = editNote;
+window.toggleArchive = toggleArchive;
+window.deleteNote = deleteNote;
