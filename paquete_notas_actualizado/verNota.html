@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nota</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+    }
+
+    .note-container {
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    .note-text {
+      white-space: pre-wrap;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    small {
+      color: #555;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="note-container">
+    <h2 id="note-author"></h2>
+    <div id="note-content" class="note-text"></div>
+    <small id="note-date"></small><br>
+    <button onclick="window.location.href='index.html'">Regresar</button>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+    import {
+      getFirestore, doc, getDoc
+    } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+    import {
+      getAuth, onAuthStateChanged
+    } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyC2eHO_hugzqyoYcu3CUiVhc0CS2HjDFWY",
+      authDomain: "midiarioweb-c7de6.firebaseapp.com",
+      projectId: "midiarioweb-c7de6",
+      storageBucket: "midiarioweb-c7de6.appspot.com",
+      messagingSenderId: "26488528874",
+      appId: "1:26488528874:web:8ee15bbdc497b28cf69c93"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+    const auth = getAuth(app);
+
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        document.body.innerHTML = "<p>Debes iniciar sesión para ver esta nota.</p>";
+        return;
+      }
+
+      if (!id) {
+        document.body.innerHTML = "<p>ID de nota no proporcionado.</p>";
+        return;
+      }
+
+      const docRef = doc(db, "notas", id);
+      getDoc(docRef).then(docSnap => {
+        if (docSnap.exists()) {
+          const note = docSnap.data();
+          document.getElementById("note-author").textContent = note.author;
+          document.getElementById("note-content").textContent = note.content;
+          document.getElementById("note-date").textContent = `${note.date} ${note.time}`;
+        } else {
+          document.body.innerHTML = "<p>No se encontró la nota.</p>";
+        }
+      }).catch(error => {
+        document.body.innerHTML = "<p>Error al cargar la nota.</p>";
+        console.error(error);
+      });
+    });
+  </script>
+</body>
+</html>
